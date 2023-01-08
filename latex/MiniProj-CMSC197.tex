@@ -41,7 +41,7 @@ Ara Abigail Ambita}
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-In the Philippines, usage of energy has been steadily increasing over the years, however, the advent of the COVID19 pandemic brought about unforeseen changes to these parameters. By using machine learning algorithms, energy predictions can be more properly assessed, and corresponding measures can be put into place. The Monthly and Quarterly Market Assessment Report of Wholesale Electricity Spot Market(WESM), governed by Philippines Electricity Market Corporation  (PEMC)'s data will be analyzed using three machine learning algorithms, namely: Linear Regression, SVR, and XGBoost to determine the best algorithm in predicting energy consumption within the pre-pandemic and pandemic periods. To compare between algorithms, the metric of choice will be Random Square Mean Error (RSME). Anaconda will be the main tool used in the project, alongside umbrella applications such as Jupyter and Datalore. Python will be the chosen programming language, and packages that are deemed valuable will also be utilized.
+In the Philippines, usage of energy has been steadily increasing over the years, however, the advent of the COVID-19 pandemic brought about unforeseen changes to these parameters. By using machine learning algorithms, energy predictions can be more properly assessed, and corresponding measures can be put into place. The Monthly and Quarterly Market Assessment Report of Wholesale Electricity Spot Market(WESM), governed by Philippines Electricity Market Corporation  (PEMC)'s data was analyzed using four machine learning algorithms, namely, Random Forest, Linear Regression, SVR, and XGBoost to determine the best algorithm in predicting energy consumption within the pre-pandemic and pandemic periods. Running these algorithms on the dataset through the Scikit-learn Python library, it was found that the Pre-pandemic (Period 1) data  was most accurately predicted by the XGBoost model, having an RMSE of 366.691 and MAPE of 0.044, while the Pandemic (Period 2) data was most accurately predicted by the Random Forest Model from its RMSE of 687.665 and MAPE of 0.061. The poorest performing model for both these periods was the SVR, getting an RMSE of 431.366 and 982.202 to the respective periods. The results show how developing predictive models from XGBoost and Random Forest Models is significant to forecasting energy consumption in the Philippines, and is therefore also beneficial for future studies that aim to engage in the same context.
 
 \keywords{Energy consumption \and Forecast \and Machine learning}
 \end{abstract}
@@ -53,21 +53,20 @@ Energy has always played a vital part in modern society. In fact, Barak and Sade
 
 In the Philippines, the average energy consumption per person reached a peak of 5,205 kWh in 2019 and has been relatively increasing in each year prior. Some notable trends which follow this annual increase include country energy consumption (peaked at 563 TWh in 2019), country electricity generation (peaked at 108.27 TWh in 2021), and average electricity generation per person (peaked at 961 KWh in 2019). 
 
-These statistics, as authored by Ritchie et al. (2019), go to show how studying energy consumption in the Philippines proves to be relevant, especially that the population’s access to electricity is at an all-time high at 96.84\%. Furthermore, Barak and Sadegh (2016) also mentioned how there is a lack of datasets in developing economies to be able to predict future demands in electricity. This is where tools such as regression analysis become useful to bridge the gap of such data deficiency. It can be used to generate predicted data and thus arrive at a plausible conclusion if energy demands would still be met in the years to come. More importantly, knowing the pattern of consumption and predicting the trend of energy consumption can work to determine priorities in the process of taking decisions on a sustainable urban environment for the energy sector in the Philippines, and therefore be a reasonable metric to improve energy efficiency of industrial and commercial industries for better policymaking. 
+These statistics, as authored by Ritchie et al. (2019), go to show how studying energy consumption in the Philippines proves to be relevant, especially that the population’s access to electricity is at an all-time high at 96.84\%. Furthermore, Barak and Sadegh (2016) also mentioned how there is a lack of datasets in developing economies to be able to predict future demands in electricity. This is where tools such as regression analysis become useful to bridge the gap of such data deficiency. It can be used to generate predicted data and thus arrive at a plausible conclusion if energy demands would still be met in the years to come. More importantly, knowing the pattern of consumption and predicting the trend of energy consumption can work to determine priorities in the process of taking decisions on a sustainable urban environment for the energy sector in the Philippines, and therefore be a reasonable metric to improve energy efficiency of industrial and commercial industries for better policy-making. 
 
-Finally, accomplishing the mini-project would be beneficial in concretizing findings established in relevant past studies, as well as exploring how these build on in more specific contexts such as of the Philippines. Relatively, this would also be able to help future research, in that it could provide insights from the methodology and findings gathered in regression analysis and thus foreground the generation of more accurate results.
+Finally, it would be beneficial in concretizing findings established in relevant past studies, as well as exploring how these build on in more specific contexts such as of the Philippines. Relatively, this would also be able to help future research, in that it could provide insights from the methodology and findings gathered in regression analysis and thus foreground the generation of more accurate results.
 
 This paper will assess different machine learning algorithms in forecasting time series of energy consumption in the Philippines and compare the viability and accuracy of each forecasting. By this, allowing the researchers to investigate on which approach is likely to be accurate for future implementation of energy consumption prediction.
 
 \subsection{Literature Review}
-Shin and Woo (2022) compared three distinct machine-learning algorithms, namely the Random (RF) model, XGBoost (XGB) model, and Long Short-Term Memory (LSTM) model in order to predict the energy consumption of Korea. The researchers concluded their findings by suggesting the applicability of machine learning in forecasting energy consumption. Although there is also an evident demonstration of machine learning being outperformed by traditional econometric approaches,  ML is advantageous and works better when encountered with unexpected irregular time series data ML. 
+Shin and Woo (2022) compared three distinct machine learning algorithms, namely the Random (RF) model, XGBoost (XGB) model, and Long Short-Term Memory (LSTM) model in order to predict the energy consumption of Korea. The researchers concluded their findings by suggesting the applicability of machine learning in forecasting energy consumption. Although there is also an evident demonstration of machine learning being outperformed by traditional econometric approaches,  ML is advantageous and works better when encountered with unexpected irregular time series data ML. 
 
 Similarly, Rambabu et. al. (2022) exhaustively delved into the prediction and analysis of household energy consumption through machine learning algorithms for energy management. Their paper focused on predicting household energy consumption where models are trained by using various machine learning algorithms such as Linear Regression, Lasso Regression, Random Forest, Extra Tree Regressor, XG Boost, etc. It must be noted that patterns of household energy consumption are observed by the constant changing of different factors namely, temperature, humidity, an hour of the day, etc. The researchers’ findings suggested that tree-based models give the best results among the rest of the machine-learning approaches used. This is because they evaluated the models using R square as the forecasting is based on time. R square can be utilized to gauge how much variance in the dependent variable can be predicted. 
 
-A case study in Malaysia discussed energy consumption prediction by using three methodologies of machine learning, specifically, Support Vector Machine, Artificial Neural Network, and k-Nearest Neighbor. These approaches were proposed for the algorithm of the predictive model. Shapi et. al. (2021) explored a great insight into real-life applications where the researchers used two tenants from a commercial building as proponents of their case study. The metrics of evaluation used in the paper are compared based on RMSE, NRMSE, and MAPE metrics.
+A case study in Malaysia also discussed energy consumption prediction by using three methodologies of machine learning, specifically, Support Vector Machine, Artificial Neural Network, and k-Nearest Neighbor. These approaches were proposed for the algorithm of the predictive model. Shapi et. al. (2021) explored a great insight into real-life applications where the researchers used two tenants from a commercial building as proponents of their case study. The metrics of evaluation used in the paper are compared based on RMSE, NRMSE, and MAPE metrics.
 
 \section{Data and Methodology}
-This chapter presents the data used throughout the paper and describes the implementation method that will be performed to accomplish the project objective. With this, it will also discuss the process of the researchers and the analysis used through evaluation metrics to assess the performance of the models.
 \subsection{Data}
 
 \subsubsection{Dataset}~\\
@@ -77,8 +76,8 @@ The data used throughout this project is consolidated data\footnote{For referenc
 
 \subsubsection{Data Fields}
 \begin{itemize}
-    \item \textbf{Year}. Indicating the specific year of the month that the energy consumption data was observed.
-    \item \textbf{Month}. Signifies the specific month that the energy consumption data was observed
+    \item \textbf{Year}. Indicates the specific year of the month that the energy consumption data was observed.
+    \item \textbf{Month}. Signifies the specific month the energy consumption data was observed in.
     \item \textbf{Date}. Complete detail of the year, month, and day that the energy was observed.
     \item \textbf{Total Energy Consumption (in GWh)}. This refers to the sum of monthly energy consumption from January of 2014 up to June 2022. 
     \item \textbf{Total Energy Consumption of CC by Industry Type (in GWh)}. Denotes the energy consumption of Contestatable Customers\footnote{The term is used for a customer that engages in consolidating electric power demand to end-users and is able to choose their own electricity provider} by its Industry type, namely, Commercial and Industrial.
@@ -92,23 +91,19 @@ The data were mostly curated from the summary reports of WESM. So, the total ene
 
 \subsection{Methodology}
 
-To evaluate the data concerning the scope of the project, three machine learning algorithms are run and compared with each other for accuracy. The models that will be implemented in this paper are: \textit{Random Forest (RF) Model, XGBoost, Linear Regression,} and lastly, \textit{Support Vector Regression (SVR)}. These models were selected because they yield a significant analysis and meaningful information in a predictive approach based from the previous published related works. Not only that, this paper revolves on finding the accurate model to implement in terms of forecasting energy consumption therefore regression is advantageous in capturing associations and relationships between forecast variable of interest and predictor variables.
+To evaluate the data concerning the scope of the project, four machine learning algorithms were run and compared with each other for accuracy. The models that were implemented in this paper are: \textit{Random Forest (RF) Model, XGBoost, Linear Regression,} and lastly, \textit{Support Vector Regression (SVR)}. These models were selected because they yield a significant analysis and meaningful information in a predictive approach based from the previous published related works. Not only that, this paper revolves on finding the accurate model to implement in terms of forecasting energy consumption, therefore regression is advantageous in capturing associations and relationships between forecast variable of interest and predictor variables.
 
-The time periods for analysis are divided into two, namely: Pre-pandemic and Pandemic periods, Period 1 and Period 2, respectively. The separation of time periods serves as the basis of the efficiency of the models when practiced on a sudden shift of regulations brought by the height of the pandemic.
+The time periods for analysis are divided into two, namely: Pre-pandemic and Pandemic periods, additionally labeled as Period 1 and Period 2, respectively. The separation of time periods serves as the basis of the efficiency of the models when practiced on a sudden shift of regulations brought by the height of the pandemic.
 
-The pre-pandemic period is composed of rather linear growth in terms of energy consumption and saw a rise from a starting point of 4422 GWh (Jan 2014) to an endpoint of 6224 GWh (Mar 2020) and a peak point of 7697 GWh (Jun 2019).
-
-Following this, Period 1 will make use of "January 2014 to March 2020" in which the training data will start from "January 2014 to June 2018", while the rest will be the testing data "July 2018 to March 2020"
+The pre-pandemic period is composed of rather linear growth in terms of energy consumption and saw a rise from a starting point of 4422 GWh (Jan 2014) to an endpoint of 6224 GWh (Mar 2020) and a peak point of 7697 GWh (Jun 2019). Following this, Period 1 made use of "January 2014 to March 2020" in which the training data started from "January 2014 to June 2018", while the rest was the testing data "July 2018 to March 2020"
 
 One of the main reasons for the group’s undertaking of the project can be seen in the data from April 2020, which was the first month of lockdown and in turn, led to a staggering decrease in energy consumption(3760 GWh from the previous month’s 6224 GWh) as non-essential buildings were cut off to minimize losses, amongst other reasons. Power generation was drastically reduced due to slowdown in terms of economical manufacturing production, and the energy consumption both in commercial and infrastructure sector by 2.0\% \cite{shin-woo}.
 
-Following this, Period 2 uses "January 2014 to February 2020" as the training data, the period wherein it witnessed the drastic change in energy consumption. Meanwhile, the testing data will use "March 2020 to June 2022".
+Following this, Period 2 used "January 2014 to February 2020" as the training data, the period wherein it witnessed the drastic change in energy consumption. Meanwhile, the testing data used "March 2020 to June 2022".
 
-This paper will provide separate models in order to demonstrate their respective predictive performance in accordance to the situation of the market. Overall, the machine learning models mentioned will be made possible because of Python, importing series of statistical package and libraries for empirical analysis later on.
+As for the preprocessing, this paper only involved two dataset field which are the \textit{Date} and \textit{Total Energy Consumption (in GWh)}. In fact, the \textit{Date} was set and served as the index of the entire data. Additionally, forecasting thoroughly engaged in time series, hence, \textit{create\_features()} function created a copy distinguishing the features \textit{"Quarter"}, \textit{"Month"}, \textit{"Year"}, and \textit{"Day of Year"} and aid the training data as some kind of indicators. On the other hand, the target of the implementation was to evaluate the \textit{Total Energy Consumption (in GWh)}. The model only revolved in a univariate approach, independent (date) and independent (energy consumption) variables.
 
-As for the preprocessing, this paper will only involve two dataset field which are the \textit{Date} and \textit{Total Energy Consumption (in GWh)}. In fact, the \textit{Date} will be set and serve as the index of the entire data. Additionally, forecasting will thoroughly engage in time series, hence, \textit{create\_features()} function will create a copy distinguishing the features \textit{"Quarter"}, \textit{"Month"}, \textit{"Year"}, and \textit{"Day of Year"} and aid the training data as some kind of indicators. On the other hand, the target of the implementation is to evaluate the \textit{Total Energy Consumption (in GWh)}. The model will only revolve in a univariate approach, independent (date) and independent (energy consumption) variables.
-
-Initializing the training and testing data, Period 1 and Period 2 will have their own respective set. \textit{trainPre} and \textit{testPre} for Period 1, while, \textit{trainPan} and \textit{testPan} for the pandemic Period 2. With that, both periods will also be accompanied by an independent features \textit{X\_train} and \textit{X\_test}. Also, the target or the dependent variable which is the energy consumption, \textit{y\_train} and \textit{y\_test}.
+Initializing the training and testing data, Period 1 and Period 2 had their own respective set. \textit{trainPre} and \textit{testPre} for Period 1, while, \textit{trainPan} and \textit{testPan} for the pandemic Period 2. With that, both periods were accompanied by independent features \textit{X\_train} and \textit{X\_test}. Also, the target or the dependent variable which is the energy consumption, \textit{y\_train} and \textit{y\_test}.
 
 \subsection{Evaluating Forecast Accuracy}
 Since the result of the focus of the project is regression analysis, in the context of prediction driven models, the most widely adopted reliability analysis indicators are Root Mean Square Error (RMSE) and Mean Absolute Percentage Error (MAPE). RMSE measures the differences between the predicted and actual values and therefore a means to measure the quality of fit between the actual data and predicted model. It is preferred over the standard Mean Square Error (MSE) since it is a smaller value and can be compared more straightforwardly. Furthermore, MAPE is one of the metrics of evaluation used in this paper since it relatively measures how accurate the forecast system is. RMSE equation is shown in Equation (1), while the equation of MAPE is shown in Equation (2) \\
@@ -189,7 +184,7 @@ The figure depicts the actual and predicted values of the total energy consumpti
 \end{figure}
 Linear regression is a simple but powerful technique for forecasting. It is effective because it makes a strong assumption about the relationship between the input variables and the output variable, which allows it to make reliable predictions even when the data is noisy or there are missing values. In fact, linear regression is fast and easy to implement, making it a popular choice for many forecasting tasks.
 
-In the Linear Regression model, there are no hyperparameters involve for tuning. It fits the linear model that will minimize the difference between the predicted values and the actual values in the data between the observed target which is the total energy consumption. As a result, linear approximation is observed to make predictions about the target variables. Figure \ref{fig:lr-model} illustrates the comparison graph of actual and predicted values for the total energy consumption. 
+In the Linear Regression model, there are no hyperparameters involved for tuning. It fits the linear model that will minimize the difference between the predicted values and the actual values in the data between the observed target which is the total energy consumption. As a result, linear approximation is observed to make predictions about the target variables. Figure \ref{fig:lr-model} illustrates the comparison graph of actual and predicted values for the total energy consumption. 
 
 \subsection{Support Vector Regression (SVR) Model}
 \begin{figure}
@@ -214,8 +209,8 @@ SVR is often used for forecasting because it can handle data with multiple featu
 
 In the Support Vector Regression (SVR) model, the hyperparameter for this model was changed. \textit{SVR()} function was used wherein the \textit{kernel} value is \textit{linear}, changed the regularization parameter \textit{C} from its default value to 10000, and \textit{epsilon} equal to 10. Both periods were fitted using the time series features and total energy consumption. Figure \ref{fig:svr-model} illustrates the comparison graph of actual and predicted values for the total energy consumption. Overall, in order to decide the final model for the SVR with minimal RMSE, repeated training was conducted. Hence, output from Figure \ref{fig:svr-model}. 
 
-\section{Results}
-The group utilized the Scikit learn package to build Random Forest, XGBoost, Linear Regression, and Support Vector Regression models. With that, the final model was chosen based on the lowest root mean squared error (RMSE) value. Table \ref{tab:perf} compares the test data RMSE values of the machine learning models for two different periods, Period 1 and 2.
+\section{Results and Discussion}
+The group utilized the Sci-kit learn package to build Random Forest, XGBoost, Linear Regression, and Support Vector Regression models. With that, the final model was chosen based on the lowest root mean squared error (RMSE) value. Table \ref{tab:perf} summarizes the metric of evaluation for the forecasting. It compares the test data RMSE and MAPE values of the machine learning models for two different periods, Period 1 and 2.
 
 \begin{center}
 \begin{table}[]
@@ -239,40 +234,212 @@ The group utilized the Scikit learn package to build Random Forest, XGBoost, Lin
 \end{table}
 \end{center}
 
-The group utilized the Scikit learn package to build Random Forest, XGBoost, Linear Regression, and Support Vector Regression models. With that, the final model was chosen based on the lowest root mean squared error (RMSE) value. Table \ref{tab:perf} compares the test data RMSE values of the machine learning models for two different periods, Period 1 and 2. The group utilized the Scikit learn package to build Random Forest, XGBoost, Linear Regression, and Support Vector Regression models. With that, the final model was chosen based on the lowest root mean squared error (RMSE) value. Table \ref{tab:perf} compares the test data RMSE values of the machine learning models for two different periods, Period 1 and 2.
+Following this, the machine learning model that yielded the lowest RMSE for Period 1 is the XGBoost model with a value of 366.691.  Whereas, for Period 2, the Random Forest model was regarded as the final model since it has a RMSE of 687.665 and it's the least RMSE among the models implemented. Based on the empirical data that was presented, the Support Vector Regression (SVR) model accumulated the highest RMSE for both periods with values of 431.366 (Period 1) and 982.202 (Period 2) which in this case will not be regarded as the final model because of it overfitting of data.
+
+\begin{center}
+\begin{table}[]
+    \centering
+    \caption{Interpretation of MAPE Results for Forecasting Accuracy.}
+    \label{tab:perf}
+    \begin{tabular}{cc}
+    \hline
+    \textbf{MAPE-value}  & \textbf{Accuracy of Forecast} \\
+    \hline
+    Less than 10\%    & Highly Accurate Forecast\\
+    11\% to 20\%    & Good Forecast\\
+    21\% to 50\%     & Reasonable Forecast\\
+    More than 51\%    & Inaccurate Forecast\\
+    \hline
+    \end{tabular}
+\end{table}
+\end{center}
+
+Lewis (1982) categorized the accuracy of the forecast based on the predictive models' MAPE values. Through this, this paper utilized this interpretation of forecasting accuracy. 
+
+In Period 1, all the models showed a high accurate forecast with their MAPE values of 0.050, 0.044, 0.0.47, and 0.05, for RF, XGBoost, Linear Regression, and SVR, respectively. Comparatively, Period 2 models forecast returned good accuracy for both Linear Regression and SVR interpreting that both models were not as high as RF and XGBoost's. This goes to show that the latter models can be identified as accurate models for Period 2 than the former (Linear Reg and SVR).
+
+Overall, the metrics of evaluation showed the machine learning models that yielded the least RMSE value are the XGBoost and Random Forest model, Period 1 and 2, respectively. Both of these models were deemed \textit{Highly Accurate} in terms of their forecasting ability. On the other hand, Linear Regression and Support Vector Regression (SVR) gained the highest RMSE amongst the models in Period 1 and 2. Not only that, but both of these models forecasting accuracy are simply \textit{Good Forecast} as opposed to the aforementioned models with high accuracy.
+
+\subsection{Forecast Results}
+As shown in Figure \ref{fig:rfwitherror}, both periods were compared in the Random Forest model in which they are accompanied by their respective prediction errors. Figures \ref{fig:resultRF-p1} and \ref{fig:resultRF-p2} show actual values forecasted against the predicted values. Period 1 depicts that the predicted values were much lower than the actual values from April 2019 to March 2020. 
+
+Whereas, the prediction in Period 2 slightly forecasted the actual values between January 2021 until March 2022. April 2021 to September 2021 were accurately predicted. The data of the Random Forest model can further be observed through the prediction errors wherein the residual were quite loose for Period 1 as compared to Period 2 which are compact given that there is one outlier due to sudden decrease of energy consumption during the start of lockdowns.
+\begin{center}
+    \begin{figure}[h]
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/rf/p1.png}
+         \caption{}
+         \label{fig:resultRF-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/rf/p2.png}
+         \caption{}
+         \label{fig:resultRF-p2}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/rf/erp1.png}
+         \caption{}
+         \label{fig:errorRF-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/rf/erp2.png}
+         \caption{}
+         \label{fig:errorRF-p2}
+    \end{subfigure}
+    \caption{Random forest model comparison by period with prediction error.}
+    \label{fig:rfwitherror}
+\end{figure}
+\end{center}
+
+Figure \ref{fig:xgboostwitherror} illustrates the XGBoost model comparison of Period 1 and 2 with their respective prediction errors. Figures \ref{fig:resultXGB-p1} and \ref{fig:resultXGB-p2} show the actual values forecasted against the predicted values in which Period 1 depicts that the predicted values were much lower than the actual values from April 2019 to October 2020. 
+
+However, Period 2's prediction forecasted the actual values between April 2021 to September 2021. The data were closely tight from June 2019 until June 2022. Observing the prediction errors, in Figures \ref{fig:errorXGB-p1} and \ref{fig:errorXGB-p2}, the residual were quite loose for Period 1 as compared to Period 2 which are more compact given that there is one outlier due to sudden decrease of energy consumption during the start of lockdowns.  
+\begin{center}
+    \begin{figure}[h]
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/xgboost/p1.png}
+         \caption{}
+         \label{fig:resultXGB-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/xgboost/p2.png}
+         \caption{}
+         \label{fig:resultXGB-p2}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/xgboost/erp1.png}
+         \caption{}
+         \label{fig:errorXGB-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/xgboost/erp2.png}
+         \caption{}
+         \label{fig:errorXGB-p2}
+    \end{subfigure}
+    \caption{XGBoost model comparison by period with prediction error.}
+    \label{fig:xgboostwitherror}
+\end{figure}
+\end{center}
+Figure \ref{fig:lrwitherror} illustrates the Linear Regression model comparison of Period 1 and 2 with their respective prediction errors. Based on the graph, Figures \ref{fig:resultXGB-p1} and \ref{fig:resultXGB-p2}, it showed a great disparity between the actual values and the predicted values in Period 1. The start of pre-pandemic, August 2018 to November 2018, it was fairly forecasted. However, it took a great turn on the following months wherein the prediction were incongruent to the actual. The analysis can also extend to Period 2's forecast since the graph showed no similarities to the actual values. Importantly, Figures \ref{fig:errorLR-p1} and \ref{fig:errorLR-p2} showed the prediction of error relatively affected the forecast since the predicted values were not consistent with the actual values.
+\begin{center}
+    \begin{figure}[h]
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/lr/p1.png}
+         \caption{}
+         \label{fig:resultLR-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/lr/p2.png}
+         \caption{}
+         \label{fig:resultLR-p2}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/lr/erp1.png}
+         \caption{}
+         \label{fig:errorLR-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/lr/erp2.png}
+         \caption{}
+         \label{fig:errorLR-p2}
+    \end{subfigure}
+    \caption{Linear Regression model comparison by period with prediction error.}
+    \label{fig:lrwitherror}
+\end{figure}
+\end{center}
+
+Figure \ref{fig:svrwitherror} illustrates the Support Vector Regression model comparison of Period 1 and 2 with their respective prediction errors. Figures \ref{fig:resultSVR-p1} and \ref{fig:resultSVR-p2}, same with the previous model, Linear Regression, it also showed a great disparity between the actual values and the predicted values in Period 1. The forecasting was incongruent with the actual wherein there is somewhat a disconnect using the model in terms of actualizing the predicted values with the actual. 
+
+The analysis can also extend to Period 2's forecast since the graph showed no similarities to the actual values. With that, comparing the SVR and Linear Regression models, both were quite similar in their forecast.
+
+\begin{center}
+    \begin{figure}[h]
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/svr/p1.png}
+         \caption{}
+         \label{fig:resultSVR-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.6\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/svr/p2.png}
+         \caption{}
+         \label{fig:resultSVR-p2}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/svr/erp1.png}
+         \caption{}
+         \label{fig:errorSVR-p1}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.60\textwidth}
+         \centering
+         \hspace*{-1.3in}
+         \includegraphics[width=\textwidth]{results/svr/erp2.png}
+         \caption{}
+         \label{fig:errorSVR-p2}
+    \end{subfigure}
+    \caption{SVR model comparison by period with prediction error.}
+    \label{fig:svrwitherror}
+\end{figure}
+\end{center}
+
+Figures \ref{fig:rfwitherror} - \ref{fig:svrwitherror} compare the predicted values from machine learning models with the actual values and the predicted values from the optimal model for each time period.
 
 \begin{figure}[h]
-    \begin{subfigure}[h]{\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{rf/p1-1-RF.png}
-         \caption{}
-         \label{fig:modelRF-p1}
-    \end{subfigure}
-    \begin{subfigure}[h]{\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{xgboost/p1-1-XGBoost.png}
-         \caption{}
-         \label{fig:modelRF-p2}
-    \end{subfigure}
-    \begin{subfigure}[h]{\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{lr/p1-1-LR.png}
-         \caption{}
-         \label{fig:modelRF-p1}
-    \end{subfigure}
-    \begin{subfigure}[h]{\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{figures/svr/p1-1-SVR.png}
-         \caption{}
-         \label{fig:modelRF-p2}
-    \end{subfigure}
-    \caption{Period 1 Models Forecasting}
-    \label{fig:fig1}
+    \centering
+    \includegraphics[width=\textwidth]{results/forecastp1.png}
+    \caption{Machine learning models forecast in Period 1}
+    \label{fig:forecast-p1}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/results/forecastp2.png}
+    \caption{Machine learning models forecast in Period 2}
+    \label{fig:forecast-p2}
 \end{figure}
 
+Figures \ref{fig:forecast-p1} and \ref{fig:forecast-p2} demonstrates all the machine learning models forecast using the predicted values against the actual values for Period 1 and 2. It can be seen that the forecasting ability of the models varied and there was a noticeable difference in the predicted values when tracking the post-rebound rise. In the first period, the XGBoost model performed the best by following similar trend intervals. In the second period, the optimal model, which was the Random Forest (RF) model, produced predictions that were almost the same as the actual values by only a margin with XGBoost.
+
 \section{Conclusion}
+The energy sector in the Philippines has such potential in crafting policies that focuses on energy consumption. In fact, the accurate prediction of total energy consumption is essential for the implementation of effective energy policy. As mentioned earlier, there is a need to know the pattern of consumption and predicting the trend of energy consumption for us to work on determining priorities in the process of taking decisions on a sustainable urban environment for the energy sector in the Philippines, and therefore be a reasonable metric to improve energy efficiency of industrial and commercial industries for better policymaking.
 
+The paper introduced different machine learning algorithms in forecasting tie series of energy consumption and compared the viability of these models on whose approach has high accuracy to predict these patterns or trends surrounding the consumption of energy. Two periods were used in the analysis, pre-pandemic and pandemic, Period 1 and 2, respectively.
 
+To summarize, the XGBoost model was most accurate in predicting the first period, while the RF model had the lowest RMSE in the second period. Both models were significant in identifying effective machine learning model in forecasting energy consumption for future studies here in the Philippines.
+
+This study explored the use of machine learning to forecast energy consumption and determined the viable model that can be implemented in analyzing energy forecast here in the Philippines. The study also verified the predictive power of machine learning in the energy market using real data and suggested that this forecasting model could be used by energy companies and governments to better respond to changes in energy consumption and improve the reliability of energy supply and demand data.
+
+There are a few limitations to this research and potential areas for future study. Firstly, the accuracy of the model's prediction and analysis can vary depending on the data and variable settings, making it difficult to determine which approach is superior in all cases. More research is needed to address this issue. Additionally, the study included a separate time period covering post COVID-19 for comparison, but it is uncertain whether the results will be applicable to future data. Secondly, the caveats mentioned earlier in the data summarize how the data regarding energy consumption is lacking here in the Philippines. In order to build an effective way for forecasting the consumption of energy, we must start in consolidating the energy data in the country. Thirdly, to further invoke a much higher accuracy, the samples of the data must be increased or at least the data points should be widened for distinguishing more models with better predictive approach.
+
+Therefore, the future work should further investigate on time series forecasting algorithms such as Autoregressive Integrated Moving Average (ARIMA) and Seasonal Trend Decomposition to enhance the analysis by integrating energy consumption by day or seasons.
 
 
 
