@@ -28,4 +28,4 @@ The notebook containing the codes can be directly accessed in this repository.
 
 ## Summary Video
 
-The video presentation can be viewed by clicking this [link]()
+The video presentation can be viewed by clicking this [link](https://drive.google.com/file/d/1m3zGcrNy0Vh3llCakEHpPcrjUMltxmpC/view)
