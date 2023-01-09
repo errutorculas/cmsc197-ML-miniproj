@@ -1,4 +1,4 @@
-# Forcasting Energy Consumption in the Philippines Using Machine Learning Algorithms
+# Forecasting Energy Consumption in the Philippines Using Machine Learning Algorithms
 
 ### Erru Torculas, Earl James Rentillo, Brethren Ace dela Gente
 
